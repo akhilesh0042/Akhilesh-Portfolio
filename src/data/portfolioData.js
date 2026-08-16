@@ -5,9 +5,9 @@ export const personalInfo = {
   subheadline: "Based in Kerala, India. Focused on robust backend architecture, scalable database schemas, and expanding into modern React and Tailwind interfaces.",
   status: "Open to opportunities",
   location: "Kerala, India",
-  email: "akhilesh.dev24@gmail.com",
-  github: "https://github.com/akhilesh-dev",
-  linkedin: "https://linkedin.com/in/akhilesh-dev-py",
+  email: "akhileshprakash0042@gmail.com",
+  github: "https://github.com/akhilesh0042",
+  linkedin: "https://www.linkedin.com/in/akhilesh-p-582936389",
   education: {
     degree: "Master of Computer Applications (MCA)",
     institution: "APJ Abdul Kalam Technological University (KTU)",
