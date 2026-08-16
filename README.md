@@ -32,22 +32,26 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommen
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-   cd "Akhilesh Portfolio"
+   git clone https://github.com/akhilesh0042/Akhilesh-Portfolio.git
+   cd "Akhilesh-Portfolio"
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server:**
+
    ```bash
    npm run dev
    ```
 
 4. **Build for production:**
+
    ```bash
    npm run build
    ```
@@ -62,6 +66,6 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommen
 ## 📬 Contact & Links
 
 - **Developer**: Akhilesh
-- **Email**: akhilesh.dev24@gmail.com
-- **LinkedIn**: [linkedin.com/in/akhilesh-dev-py](https://linkedin.com/in/akhilesh-dev-py)
-- **GitHub**: [github.com/akhilesh-dev](https://github.com/akhilesh-dev)
+- **Email**: [EMAIL_ADDRESS]
+- **LinkedIn**: [linkedin.com/in/akhilesh-p-582936389](https://www.linkedin.com/in/akhilesh-p-582936389)
+- **GitHub**: [github.com/akhilesh0042](https://github.com/akhilesh0042)
