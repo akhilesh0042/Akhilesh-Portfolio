@@ -1,0 +1,244 @@
+{
+  "hero": {
+    "name": "Akhilesh",
+    "role": "Python & Django Developer — Fresher",
+    "tagline": "Final-year MCA student at APJ Abdul Kalam Technological University specializing in Python, Django, and MySQL. I engineer robust RESTful backends, data-driven systems, and clean interfaces with React and Tailwind.",
+    "subTagline": "Architect of LeavEase (enterprise leave workflow) and ALAMARAi (multimodal AI stylist via Gemini API).",
+    "status": "Open to opportunities",
+    "statusColor": "amber",
+    "location": "Kerala, India"
+  },
+  "about": {
+    "paragraph1": "I am a final-year Master of Computer Applications (MCA) student at APJ Abdul Kalam Technological University (KTU) in Kerala, India. My work is centered around Python and Django — transforming complex workflows into clean, maintainable backend applications.",
+    "paragraph2": "During my academic and independent engineering projects, I have developed a strong foundation in relational database design with MySQL, object-relational mapping (ORM) query optimization, REST API design, and multi-tier authentication systems.",
+    "paragraph3": "Rather than relying on templates or pre-packaged magic, I prioritize understanding system internals: session security, role-based permission matrices, schema normalization, and asynchronous API integrations (such as Google Gemini for multimodal AI workloads).",
+    "paragraph4": "Currently, I am expanding into React.js and Tailwind CSS, aiming to deliver coherent, end-to-end full-stack software with tactile, responsive interfaces.",
+    "degree": "Master of Computer Applications (MCA)",
+    "institution": "APJ Abdul Kalam Technological University (KTU)",
+    "cgpa": "8.0",
+    "statusLabel": "Final Year",
+    "directives": [
+      {
+        "title": "Clean ORM queries",
+        "desc": "Zero unprofiled N+1 queries using prefetch & indexed keys."
+      },
+      {
+        "title": "Explicit RBAC",
+        "desc": "Hierarchical permission validation at both view and serializer gates."
+      },
+      {
+        "title": "RESTful Simplicity",
+        "desc": "Deterministic HTTP status codes, structured JSON payloads, and token rotation."
+      },
+      {
+        "title": "Practical AI",
+        "desc": "Harnessing LLMs as deterministic structured data extractors."
+      }
+    ],
+    "stats": [
+      {
+        "id": "cgpa",
+        "value": "8.0",
+        "label": "MCA CGPA",
+        "sublabel": "APJ Abdul Kalam Tech University"
+      },
+      {
+        "id": "experience",
+        "value": "2+",
+        "label": "Years Hands-on Code",
+        "sublabel": "Project development & architectures"
+      },
+      {
+        "id": "projects",
+        "value": "5+",
+        "label": "Applications Shipped",
+        "sublabel": "Full-stack, REST APIs & AI"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "leavease",
+      "title": "LeavEase",
+      "subtitle": "Enterprise Leave Management & Approval System",
+      "year": "2025",
+      "shortDesc": "Full-featured leave workflow engine with role-based access control, interactive FullCalendar.js scheduling, and Chart.js analytics.",
+      "fullDesc": "Architected an end-to-end Leave Management System to replace paper-based academic and workplace approvals. Implemented multi-tier Role-Based Access Control (Admin, HOD, Faculty, Staff) with dynamic permission gates, automated leave balance recalculations, interactive FullCalendar.js visual timelines, Chart.js metrics, and secure medical document uploads.",
+      "techStack": [
+        "Python",
+        "Django",
+        "MySQL",
+        "FullCalendar.js",
+        "Chart.js",
+        "Bootstrap 5",
+        "HTML5/CSS3"
+      ],
+      "signatureDetail": "Multi-Tier RBAC & Real-Time Balance Engine",
+      "keyHighlights": [
+        "Designed granular 4-tier Role-Based Access Control (Admin, HOD, Faculty, Staff) with strict permission separation.",
+        "Integrated FullCalendar.js to provide visual department-wide leave occupancy and avoid understaffing.",
+        "Constructed Chart.js analytics dashboards summarizing leave patterns, leave balance audits, and departmental trends.",
+        "Implemented secure medical certificate file uploads with server-side mime-type validation and storage quotas.",
+        "Engineered automated email notifications & approval audit trail for zero-latency communication."
+      ],
+      "githubUrl": "https://github.com/akhilesh-dev/leavease-django-system",
+      "demoUrl": "https://leavease-demo.example.com"
+    },
+    {
+      "id": "alamarai",
+      "title": "ALAMARAi",
+      "subtitle": "AI-Powered Smart Wardrobe & Stylist Platform",
+      "year": "2025",
+      "shortDesc": "Intelligent digital wardrobe cataloging and context-aware outfit recommendation engine powered by Google Gemini API.",
+      "fullDesc": "Built an AI-driven digital wardrobe assistant that helps users catalog their clothing, generate context-aware daily outfit recommendations, and optimize wardrobe utilization. Leveraged Google Gemini Multimodal API for automated garment attribute extraction (color palette, pattern, formality, seasonality) and weather-informed styling algorithms.",
+      "techStack": [
+        "Python",
+        "Django",
+        "Google Gemini API",
+        "REST APIs",
+        "MySQL",
+        "Tailwind CSS",
+        "JavaScript"
+      ],
+      "signatureDetail": "Gemini Vision Multimodal Classification Pipeline",
+      "keyHighlights": [
+        "Engineered structured prompt pipelines with Google Gemini API to extract clothing tags and attributes from uploaded photos.",
+        "Built a weather-aware recommendation engine that pairs tops, bottoms, and footwear based on local climate and occasion.",
+        "Designed a clean responsive wardrobe catalog with multi-facet filtering and outfit composition preview.",
+        "Implemented RESTful endpoints for fast asynchronous photo processing and outfit generation."
+      ],
+      "githubUrl": "https://github.com/akhilesh-dev/alamarai-gemini-stylist",
+      "demoUrl": "https://alamarai-preview.example.com"
+    },
+    {
+      "id": "django-rest-hub",
+      "title": "Django REST API Core",
+      "subtitle": "Modular RESTful Backend Architecture",
+      "year": "2024",
+      "shortDesc": "High-throughput API endpoints with JWT authentication, custom rate limiters, MySQL relational schemas, and OpenAPI documentation.",
+      "fullDesc": "Designed a production-ready Django REST Framework boilerplate and microservice hub with modular apps, token rotation authentication, standardized error responses, query optimizations via select_related/prefetch_related, and automated Swagger documentation.",
+      "techStack": [
+        "Python",
+        "Django REST Framework",
+        "MySQL",
+        "JWT Auth",
+        "Swagger / OpenAPI",
+        "Postman"
+      ],
+      "signatureDetail": "Token Rotation & Optimized Query Layer",
+      "keyHighlights": [
+        "Custom JWT authentication middleware with sliding token refresh mechanics.",
+        "Database query profiling reducing N+1 queries using prefetch_related and database indexes.",
+        "Integrated Swagger / OpenAPI UI for automated interactive documentation and client testing.",
+        "Configured fine-grained IP and user-based throttling to defend against endpoint abuse."
+      ],
+      "githubUrl": "https://github.com/akhilesh-dev/django-rest-api-core",
+      "demoUrl": "https://api-core-docs.example.com"
+    },
+    {
+      "id": "campus-connect",
+      "title": "CampusConnect",
+      "subtitle": "Student Portal & Department Coordination Hub",
+      "year": "2024",
+      "shortDesc": "Centralized academic portal for internal circulars, event registrations, and departmental course materials.",
+      "fullDesc": "Built during MCA coursework to facilitate seamless communication between departments, student clubs, and faculty coordinators with role-specific dashboards and verified event registration.",
+      "techStack": [
+        "Python",
+        "Django",
+        "PHP / MySQL",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "signatureDetail": "Isolated Departmental Bulletin Feed",
+      "keyHighlights": [
+        "Role-isolated feeds for department-specific announcements and academic schedules.",
+        "Real-time event registration tracking with automated seat count decrementing.",
+        "Centralized resource repository with category tagging and file downloads."
+      ],
+      "githubUrl": "https://github.com/akhilesh-dev/campus-connect",
+      "demoUrl": "https://campus-connect.example.com"
+    }
+  ],
+  "skills": {
+    "Languages": {
+      "description": "Core programming and markup languages",
+      "items": [
+        { "name": "Python", "level": "Primary" },
+        { "name": "PHP", "level": "Proficient" },
+        { "name": "C", "level": "Academic" },
+        { "name": "C++", "level": "Academic" },
+        { "name": "JavaScript (ES6+)", "level": "Working" },
+        { "name": "SQL", "level": "Proficient" },
+        { "name": "HTML5 & CSS3", "level": "Proficient" }
+      ]
+    },
+    "Frameworks & Backend": {
+      "description": "Server architecture, APIs, and modern frontend",
+      "items": [
+        { "name": "Django", "level": "Primary" },
+        { "name": "Django REST Framework", "level": "Primary" },
+        { "name": "React.js", "level": "Expanding" },
+        { "name": "Tailwind CSS", "level": "Working" },
+        { "name": "Bootstrap 5", "level": "Proficient" }
+      ]
+    },
+    "Databases & Storage": {
+      "description": "Relational modeling and query optimization",
+      "items": [
+        { "name": "MySQL", "level": "Primary" },
+        { "name": "SQLite", "level": "Development" },
+        { "name": "PostgreSQL", "level": "Familiar" },
+        { "name": "Database Normalization", "level": "Proficient" }
+      ]
+    },
+    "Tools & Methodologies": {
+      "description": "Developer workflow, AI APIs, and libraries",
+      "items": [
+        { "name": "Google Gemini API", "level": "Working" },
+        { "name": "Git & GitHub", "level": "Daily Workflow" },
+        { "name": "Postman API Testing", "level": "Proficient" },
+        { "name": "FullCalendar.js", "level": "Integration" },
+        { "name": "Chart.js", "level": "Integration" },
+        { "name": "Linux / Bash Basics", "level": "Working" },
+        { "name": "RESTful Architecture", "level": "Core" }
+      ]
+    }
+  },
+  "contact": {
+    "intro": "Direct channels. Fast turnaround.",
+    "cv": {
+      "label": "Curriculum Vitae",
+      "fileUrl": "",
+      "fileName": "Akhilesh_MCA_Resume.pdf",
+      "updatedAt": "Feb 2025"
+    },
+    "email": "akhilesh.dev24@gmail.com",
+    "linkedin": "https://linkedin.com/in/akhilesh-dev-py",
+    "github": "https://github.com/akhilesh-dev",
+    "location": "Kerala, India",
+    "timezone": "IST (UTC +5:30)",
+    "personalLinks": [
+      {
+        "id": "link-twitter",
+        "label": "X / Twitter",
+        "url": "https://x.com/akhilesh_dev",
+        "icon": "twitter"
+      },
+      {
+        "id": "link-blog",
+        "label": "Technical Journal",
+        "url": "https://dev.to/akhilesh",
+        "icon": "globe"
+      }
+    ]
+  },
+  "resume": {
+    "summary": "Final-year MCA student at APJ Abdul Kalam Technological University (KTU) with an 8.0 CGPA and a strong foundation in Python, Django, and MySQL. Proven track record of architecting real-world applications including LeavEase (RBAC Leave System) and ALAMARAi (Gemini AI Wardrobe Platform). Actively expanding frontend capabilities with React and Tailwind CSS. Eager to contribute as a dedicated Python / Full-Stack Developer.",
+    "certifications": [
+      "Python for Full-Stack Development & Django Web Framework",
+      "Relational Database Design & MySQL Query Optimization",
+      "RESTful API Design & Postman Automation Testing",
+      "Generative AI & LLM Application Integration (Gemini)"
+    ]
+  }
+}
