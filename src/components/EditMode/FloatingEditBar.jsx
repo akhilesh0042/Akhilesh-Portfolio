@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Save, Download, RotateCcw, Check, X, Edit3 } from 'lucide-react';
+import { Save, Download, RotateCcw, Check, X } from 'lucide-react';
 import { useContent } from '../../context/ContentContext';
 
 export const FloatingEditBar = () => {

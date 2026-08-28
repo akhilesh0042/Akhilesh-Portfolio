@@ -34,7 +34,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommen
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+   git clone https://github.com/akhilesh0042/Akhilesh-Portfolio.git
    cd "Akhilesh Portfolio"
    ```
 

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import defaultContent from '../data/content.json';
 
 const STORAGE_KEY = 'portfolio-content';

@@ -6,7 +6,7 @@ import { InlineText } from '../EditMode/InlineText';
 import { StatusColorPicker } from '../EditMode/StatusColorPicker';
 
 export const HeroSection = ({ onOpenResume }) => {
-  const { content, updateHero, isEditMode } = useContent();
+  const { content } = useContent();
   const { hero = {} } = content;
 
   const scrollTo = (id) => {

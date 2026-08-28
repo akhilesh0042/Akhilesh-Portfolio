@@ -73,7 +73,7 @@ export const SkillsSection = () => {
                     <div className="w-8 h-8 rounded-lg bg-elevation1 flex items-center justify-center text-accent">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-mono text-sm sm:text-base font-semibold text-textPrimary tracking-wide">
+                    <h3 className="font-mono text-sm sm:text-base font-semibold text-white tracking-wide">
                       {catName}
                     </h3>
                   </div>

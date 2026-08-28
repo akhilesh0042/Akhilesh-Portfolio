@@ -14,12 +14,10 @@ import {
   FileCheck,
   Plus,
   Trash2,
-  Globe,
-  ExternalLink,
   AlertTriangle,
   Eye,
 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, TwitterXIcon, InstagramIcon, getContactIcon } from '../Common/Icons';
+import { GithubIcon, LinkedinIcon, getContactIcon } from '../Common/Icons';
 import { useContent } from '../../context/ContentContext';
 import { InlineText } from '../EditMode/InlineText';
 
@@ -79,7 +77,7 @@ export const ContactSection = ({ onOpenResume }) => {
         document.execCommand('copy');
         document.body.removeChild(textarea);
       }
-    } catch (err) {
+    } catch {
       // Synchronous fallback
     }
     setTimeout(() => setCopied(false), 2500);

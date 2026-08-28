@@ -81,7 +81,7 @@
         "Implemented secure medical certificate file uploads with server-side mime-type validation and storage quotas.",
         "Engineered automated email notifications & approval audit trail for zero-latency communication."
       ],
-      "githubUrl": "https://github.com/akhilesh-dev/leavease-django-system",
+      "githubUrl": "https://github.com/akhilesh0042/leavease-django-system",
       "demoUrl": "https://leavease-demo.example.com"
     },
     {
@@ -107,7 +107,7 @@
         "Designed a clean responsive wardrobe catalog with multi-facet filtering and outfit composition preview.",
         "Implemented RESTful endpoints for fast asynchronous photo processing and outfit generation."
       ],
-      "githubUrl": "https://github.com/akhilesh-dev/alamarai-gemini-stylist",
+      "githubUrl": "https://github.com/akhilesh0042/alamarai-gemini-stylist",
       "demoUrl": "https://alamarai-preview.example.com"
     },
     {
@@ -132,7 +132,7 @@
         "Integrated Swagger / OpenAPI UI for automated interactive documentation and client testing.",
         "Configured fine-grained IP and user-based throttling to defend against endpoint abuse."
       ],
-      "githubUrl": "https://github.com/akhilesh-dev/django-rest-api-core",
+      "githubUrl": "https://github.com/akhilesh0042/django-rest-api-core",
       "demoUrl": "https://api-core-docs.example.com"
     },
     {
@@ -155,7 +155,7 @@
         "Real-time event registration tracking with automated seat count decrementing.",
         "Centralized resource repository with category tagging and file downloads."
       ],
-      "githubUrl": "https://github.com/akhilesh-dev/campus-connect",
+      "githubUrl": "https://github.com/akhilesh0042/campus-connect",
       "demoUrl": "https://campus-connect.example.com"
     }
   ],

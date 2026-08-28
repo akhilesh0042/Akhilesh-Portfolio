@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, X, ArrowRight, ShieldCheck, KeyRound } from 'lucide-react';
+import { X, ArrowRight, KeyRound } from 'lucide-react';
 import { useContent } from '../../context/ContentContext';
 
 export const PasswordModal = () => {
