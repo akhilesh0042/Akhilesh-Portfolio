@@ -4,6 +4,7 @@ import { Save, Download, RotateCcw, Check, X } from 'lucide-react';
 import { useContent } from '../../context/ContentContext';
 
 export const FloatingEditBar = () => {
+  const isProduction = import.meta.env.PROD;
   const {
     isEditMode,
     setIsEditMode,
@@ -22,7 +23,7 @@ export const FloatingEditBar = () => {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 24, scale: 0.95 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
-        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-lg w-[92%] sm:w-auto bg-elevation2 border border-accent/40 rounded-2xl shadow-elevation-menu-scrolled px-4 py-2.5 flex flex-wrap items-center justify-between sm:justify-start gap-2 sm:gap-3 text-textPrimary"
+        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-2xl w-[94%] sm:w-auto bg-elevation2 border border-accent/40 rounded-2xl shadow-elevation-menu-scrolled px-4 py-2.5 flex flex-wrap items-center justify-between sm:justify-start gap-2 sm:gap-3 text-textPrimary"
       >
         {/* Status Badge */}
         <div className="flex items-center gap-2 pr-2 sm:border-r sm:border-white/[0.08] select-none">
@@ -30,9 +31,16 @@ export const FloatingEditBar = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
           </span>
-          <span className="font-mono text-xs text-textPrimary font-semibold tracking-wide">
-            Edit Mode
-          </span>
+          <div className="flex flex-col">
+            <span className="font-mono text-xs text-textPrimary font-semibold tracking-wide">
+              {isProduction ? 'Edit Mode (Preview Only)' : 'Edit Mode (Local)'}
+            </span>
+            {isProduction && (
+              <span className="text-[10px] font-mono text-accent/80 leading-none">
+                Preview only, not saved to server
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Actions */}
@@ -50,12 +58,12 @@ export const FloatingEditBar = () => {
             {isSavedNotification ? (
               <>
                 <Check className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Saved!</span>
+                <span>{isProduction ? 'Saved to session!' : 'Saved!'}</span>
               </>
             ) : (
               <>
                 <Save className="w-3.5 h-3.5 text-accent" />
-                <span>Save</span>
+                <span>{isProduction ? 'Save Session' : 'Save'}</span>
               </>
             )}
           </button>
