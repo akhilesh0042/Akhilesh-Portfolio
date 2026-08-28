@@ -7,8 +7,15 @@ import { useContent } from '../../context/ContentContext';
 import { Plus } from 'lucide-react';
 
 export const ProjectsSection = () => {
-  const { content, addProject, editProject, isEditMode } = useContent();
+  const { content, updateSectionHeader, addProject, editProject, isEditMode } = useContent();
   const projects = content.projects || [];
+  const { sectionHeaders = {} } = content;
+  const header = sectionHeaders.projects || {
+    number: '02',
+    eyebrow: 'SELECTED WORK',
+    title: 'Engineered systems & applied intelligence.',
+    description: 'A curated selection of full-stack Django applications, database workflows, and generative AI integrations. Arranged in reverse-grid order with staggered elevation planes.',
+  };
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -46,10 +53,13 @@ export const ProjectsSection = () => {
     >
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-4">
         <SectionHeader
-          number="02"
-          eyebrow="SELECTED WORK"
-          title="Engineered systems & applied intelligence."
-          description="A curated selection of full-stack Django applications, database workflows, and generative AI integrations. Arranged in reverse-grid order with staggered elevation planes."
+          number={header.number || '02'}
+          eyebrow={header.eyebrow}
+          title={header.title}
+          description={header.description}
+          onEyebrowChange={(val) => updateSectionHeader('projects', { eyebrow: val })}
+          onTitleChange={(val) => updateSectionHeader('projects', { title: val })}
+          onDescriptionChange={(val) => updateSectionHeader('projects', { description: val })}
         />
 
         {/* Add Project Button in Edit Mode */}

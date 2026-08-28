@@ -55,6 +55,10 @@ export const ContentProvider = ({ children }) => {
         return {
           ...defaultContent,
           ...parsed,
+          sectionHeaders: {
+            ...defaultContent.sectionHeaders,
+            ...(parsed.sectionHeaders || {}),
+          },
           hero: { ...defaultContent.hero, ...(parsed.hero || {}) },
           about: {
             ...defaultContent.about,
@@ -74,6 +78,7 @@ export const ContentProvider = ({ children }) => {
 
     return {
       ...defaultContent,
+      sectionHeaders: defaultContent.sectionHeaders || {},
       projects: (defaultContent.projects || []).map(normalizeProject),
       contact: normalizeContact(defaultContent.contact),
     };
@@ -344,6 +349,47 @@ export const ContentProvider = ({ children }) => {
     }
   };
 
+  const renameSkillCategory = (oldName, newName) => {
+    if (!newName || !newName.trim() || oldName === newName) return;
+    const trimmed = newName.trim();
+    setContent((prev) => {
+      const currentSkills = prev.skills || {};
+      if (!currentSkills[oldName]) return prev;
+
+      const updatedSkills = {};
+      Object.keys(currentSkills).forEach((k) => {
+        if (k === oldName) {
+          updatedSkills[trimmed] = currentSkills[oldName];
+        } else {
+          updatedSkills[k] = currentSkills[k];
+        }
+      });
+
+      return {
+        ...prev,
+        skills: updatedSkills,
+      };
+    });
+  };
+
+  // Section Headers Updater (for section eyebrows, titles, descriptions)
+  const updateSectionHeader = (sectionKey, updates) => {
+    setContent((prev) => {
+      const currentHeaders = prev.sectionHeaders || defaultContent.sectionHeaders || {};
+      const currentSection = currentHeaders[sectionKey] || {};
+      return {
+        ...prev,
+        sectionHeaders: {
+          ...currentHeaders,
+          [sectionKey]: {
+            ...currentSection,
+            ...updates,
+          },
+        },
+      };
+    });
+  };
+
   // Contact Section Updaters
   const updateContact = (updates) => {
     setContent((prev) => ({
@@ -498,6 +544,8 @@ export const ContentProvider = ({ children }) => {
         updateSkill,
         addSkillCategory,
         deleteSkillCategory,
+        renameSkillCategory,
+        updateSectionHeader,
         updateContact,
         updateCv,
         updateResume,

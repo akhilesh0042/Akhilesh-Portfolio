@@ -19,12 +19,21 @@ export const SkillsSection = () => {
     addSkill,
     addSkillCategory,
     deleteSkillCategory,
+    renameSkillCategory,
+    updateSectionHeader,
     updateField,
     isEditMode,
   } = useContent();
 
   const skillsObj = content.skills || {};
   const categoryNames = Object.keys(skillsObj);
+  const { sectionHeaders = {} } = content;
+  const header = sectionHeaders.skills || {
+    number: '03',
+    eyebrow: 'TECHNICAL STACK',
+    title: 'Languages, frameworks, and developer toolchain.',
+    description: 'Categorized by discipline. Each chip resides on Elevation Plane 1; resting state stays calm, with subtle amber edge-lighting on focus.',
+  };
 
   const [newCatName, setNewCatName] = useState('');
   const [isAddingCategory, setIsAddingCategory] = useState(false);
@@ -45,10 +54,13 @@ export const SkillsSection = () => {
       aria-label="Technical Skills and Tooling"
     >
       <SectionHeader
-        number="03"
-        eyebrow="TECHNICAL STACK"
-        title="Languages, frameworks, and developer toolchain."
-        description="Categorized by discipline. Each chip resides on Elevation Plane 1; resting state stays calm, with subtle amber edge-lighting on focus."
+        number={header.number || '03'}
+        eyebrow={header.eyebrow}
+        title={header.title}
+        description={header.description}
+        onEyebrowChange={(val) => updateSectionHeader('skills', { eyebrow: val })}
+        onTitleChange={(val) => updateSectionHeader('skills', { title: val })}
+        onDescriptionChange={(val) => updateSectionHeader('skills', { description: val })}
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
@@ -74,7 +86,12 @@ export const SkillsSection = () => {
                       <Icon className="w-4 h-4" />
                     </div>
                     <h3 className="font-display text-lg sm:text-xl font-medium text-white tracking-tight" style={{ color: '#ffffff' }}>
-                      {catName}
+                      <InlineText
+                        value={catName}
+                        onChange={(newVal) => renameSkillCategory(catName, newVal)}
+                        placeholder="Category Name"
+                        className="text-white font-display"
+                      />
                     </h3>
                   </div>
 

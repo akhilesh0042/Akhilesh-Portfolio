@@ -7,8 +7,14 @@ import { useContent } from '../../context/ContentContext';
 import { InlineText } from '../EditMode/InlineText';
 
 export const AboutSection = () => {
-  const { content, updateAbout, addStat, removeStat, isEditMode } = useContent();
-  const { about = {} } = content;
+  const { content, updateAbout, updateSectionHeader, addStat, removeStat, isEditMode } = useContent();
+  const { about = {}, sectionHeaders = {} } = content;
+  const header = sectionHeaders.about || {
+    number: '01',
+    eyebrow: 'BACKGROUND',
+    title: 'Engineering logic & grounded architecture.',
+    description: 'A look into my academic journey, core engineering philosophy, and current technical trajectory.',
+  };
   const stats = about.stats || [];
   const directives = about.directives || [];
 
@@ -25,10 +31,13 @@ export const AboutSection = () => {
       aria-label="About Akhilesh"
     >
       <SectionHeader
-        number="01"
-        eyebrow="BACKGROUND"
-        title="Engineering logic & grounded architecture."
-        description="A look into my academic journey, core engineering philosophy, and current technical trajectory."
+        number={header.number || '01'}
+        eyebrow={header.eyebrow}
+        title={header.title}
+        description={header.description}
+        onEyebrowChange={(val) => updateSectionHeader('about', { eyebrow: val })}
+        onTitleChange={(val) => updateSectionHeader('about', { title: val })}
+        onDescriptionChange={(val) => updateSectionHeader('about', { description: val })}
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-16 items-start mb-16">
@@ -130,7 +139,14 @@ export const AboutSection = () => {
           <div className="p-6 sm:p-7 rounded-2xl bg-elevation2 border border-white/[0.06] shadow-elevation-card-b space-y-4">
             <h3 className="font-mono text-xs text-accent uppercase tracking-wider flex items-center gap-2">
               <Code2 className="w-4 h-4" />
-              <span>Core Directives</span>
+              <span>
+                <InlineText
+                  value={about.directivesHeading || 'Core Directives'}
+                  onChange={(val) => updateAbout({ directivesHeading: val })}
+                  placeholder="Core Directives"
+                  className="text-accent uppercase tracking-wider"
+                />
+              </span>
             </h3>
 
             <ul className="space-y-3 font-mono text-xs sm:text-sm text-textMuted">

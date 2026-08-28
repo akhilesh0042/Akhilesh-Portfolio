@@ -1,4 +1,30 @@
 {
+  "sectionHeaders": {
+    "about": {
+      "number": "01",
+      "eyebrow": "BACKGROUND",
+      "title": "Engineering logic & grounded architecture.",
+      "description": "A look into my academic journey, core engineering philosophy, and current technical trajectory."
+    },
+    "projects": {
+      "number": "02",
+      "eyebrow": "SELECTED WORK",
+      "title": "Engineered systems & applied intelligence.",
+      "description": "A curated selection of full-stack Django applications, database workflows, and generative AI integrations. Arranged in reverse-grid order with staggered elevation planes."
+    },
+    "skills": {
+      "number": "03",
+      "eyebrow": "TECHNICAL STACK",
+      "title": "Languages, frameworks, and developer toolchain.",
+      "description": "Categorized by discipline. Each chip resides on Elevation Plane 1; resting state stays calm, with subtle amber edge-lighting on focus."
+    },
+    "contact": {
+      "number": "04",
+      "eyebrow": "CONNECT",
+      "title": "Direct channels. Fast turnaround.",
+      "description": "Whether for an engineering role, technical consultation, or project collaboration — I'm active and reachable through these verified channels."
+    }
+  },
   "hero": {
     "name": "Akhilesh",
     "role": "Python & Django Developer — Fresher",

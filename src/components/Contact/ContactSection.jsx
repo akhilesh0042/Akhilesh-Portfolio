@@ -33,6 +33,7 @@ const ICON_OPTIONS = [
 export const ContactSection = ({ onOpenResume }) => {
   const {
     content,
+    updateSectionHeader,
     updateContact,
     updateCv,
     addPersonalLink,
@@ -41,7 +42,13 @@ export const ContactSection = ({ onOpenResume }) => {
     isEditMode,
   } = useContent();
 
-  const { contact = {} } = content;
+  const { contact = {}, sectionHeaders = {} } = content;
+  const header = sectionHeaders.contact || {
+    number: '04',
+    eyebrow: 'CONNECT',
+    title: 'Direct channels. Fast turnaround.',
+    description: "Whether for an engineering role, technical consultation, or project collaboration — I'm active and reachable through these verified channels.",
+  };
   const cv = contact.cv || {
     label: 'Curriculum Vitae',
     fileUrl: '',
@@ -160,16 +167,16 @@ export const ContactSection = ({ onOpenResume }) => {
     >
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-4">
         <SectionHeader
-          number="04"
-          eyebrow="CONNECT"
-          title={
-            <InlineText
-              value={contact.intro}
-              onChange={(val) => updateContact({ intro: val })}
-              placeholder="Add intro text"
-            />
-          }
-          description="I am actively open to Python/Django developer roles, full-stack internships, and technical pair programming."
+          number={header.number || '04'}
+          eyebrow={header.eyebrow}
+          title={header.title || contact.intro || 'Direct channels. Fast turnaround.'}
+          description={header.description}
+          onEyebrowChange={(val) => updateSectionHeader('contact', { eyebrow: val })}
+          onTitleChange={(val) => {
+            updateSectionHeader('contact', { title: val });
+            updateContact({ intro: val });
+          }}
+          onDescriptionChange={(val) => updateSectionHeader('contact', { description: val })}
         />
 
         {/* Add Personal Link Button in Edit Mode */}
