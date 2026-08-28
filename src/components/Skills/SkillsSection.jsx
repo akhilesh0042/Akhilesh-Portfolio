@@ -68,18 +68,18 @@ export const SkillsSection = () => {
             >
               <div className="space-y-4">
                 {/* Category Header */}
-                <div className="flex items-center justify-between border-b border-white/[0.06] pb-3.5">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-elevation1 flex items-center justify-center text-accent">
+                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3.5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-elevation1 border border-white/[0.06] flex items-center justify-center text-accent shadow-sm">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <h3 className="font-mono text-sm sm:text-base font-semibold text-white tracking-wide">
+                    <h3 className="font-display text-lg sm:text-xl font-medium text-white tracking-tight" style={{ color: '#ffffff' }}>
                       {catName}
                     </h3>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-mono text-textMuted">
+                    <span className="text-xs font-mono text-textMuted bg-elevation1/60 px-2.5 py-0.5 rounded-full border border-white/[0.04]">
                       {items.length} tools
                     </span>
 
